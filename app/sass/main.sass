@@ -1,0 +1,844 @@
+@import 'fonts'
+@import 'vars'
+
+html, body
+	width: 100%
+
+header, section, footer
+	width: 100%
+	height: 100%
+
+body
+	font-size: 16px
+	font-family: 'Raleway'
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+
+ul, ol
+	list-style-type: none
+	margin: 0
+	padding: 0
+
+a, a:active, a:hover, a:focus
+	text-decoration: none
+	outline: none
+
+.w-75
+	width: 75%
+
+.w-92
+	width: 92%
+
+.w-69
+	width: 69%
+
+.w-74
+	width: 74%
+
+.w-94
+	width: 94%	
+
+.popup
+    position: relative;
+    background: #FFF;
+    padding: 20px;
+    width: auto;
+    max-width: 500px;
+    margin: 20px auto;
+    &__title
+    	text-transform: uppercase
+    	font-weight: bold
+    	text-align: center
+
+button.mfp-close
+	padding: 10px 15px 0 0
+	&:focus
+		outline: none
+
+.title
+	margin: 0
+	text-transform: uppercase
+	font-size: 30px
+	font-weight: bold
+	color: #000
+
+.line
+	width: 35px
+	height: 2px
+	display: block
+	background: #000
+	margin: 25px 0 45px
+
+.composition
+	i
+		margin: 42px auto 57px
+		color: #000
+		font-size: 14px
+		padding: 0 5px
+		display: inline-block
+		position: relative
+	&__line
+		width: 70px
+		height: 1px
+		background: #000
+		display: inline-block
+		vertical-align: middle
+	&_white
+		i
+			color: #fff
+		.composition__line
+			background: #fff
+
+.text
+	font-size: 14px
+	line-height: 23px
+	color: $text
+
+.btn
+	display: block
+	width: 158px
+	height: 39px
+	background: $accent
+	color: #fff
+	border: 1px solid $accent
+	border-radius: 0
+	text-transform: uppercase
+	font-size: 13px
+	font-weight: bold
+	line-height: 28px
+	text-align: center
+	&:hover
+		color: #fff
+	&:focus
+		outline: none !important
+	&_white
+		width: 146px
+		background: #fff
+		color: #000
+		border: 1px solid #fff
+		&:hover
+			color: #000
+	&_black
+		width: 183px
+		background: #000
+		color: #fff
+		border: 1px solid #000
+
+.header
+	background: url(../img/bg-header.png) center top no-repeat
+	background-size: cover
+	text-align: center
+	height: 100vh
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	align-items: center
+	position: relative
+	&__title
+		text-transform: uppercase
+		font-size: 70px
+		font-weight: bold
+		color: #fff
+		span
+			color: $accent
+	&__line
+		display: block
+		width: 100px
+		height: 2px
+		background: $accent
+		margin: 50px auto
+	&__text
+		font-size: 18px
+		color: #fff
+		font-family: 'DroidSerif'
+		line-height: 30px
+	&__btn
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		margin-top: 40px
+	& .btn
+		margin: 0 5px
+	&__bottom
+		height: 45px
+		background: $gray-light
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+	&__item
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		align-items: center
+		height: 45px
+	&__information
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		font-size: 13px
+		color: #fff
+		i
+			margin-right: 6px
+		.phone
+			margin-left: 30px
+			font-family: 'Lato'
+
+.social
+	&__list
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+	&__link
+		margin: 0 11px
+		a
+			color: #fff
+			transition: .25s
+			&:hover
+				color: $accent
+
+.top-line
+	height: 100px
+	background: $top-line
+	position: relative
+	font-family: 'Lato'
+	&__logo
+		margin-top: 33px
+
+.menu
+	position: absolute
+	top: 0
+	right: 0
+	&__list
+		height: 100px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+	&__link
+		text-transform: uppercase
+		a
+			font-size: 14px
+			color: #fff
+			font-weight: bold
+			font-family: 'Lato', sans-serif
+			margin-right: 38px
+			transition: .25s
+			&:hover
+				color: $accent
+		&_active
+			a
+				color: $accent
+
+.burger
+	position: absolute
+	top: 91px
+	right: 50px
+	transition: .4s
+	width: 20px
+	height: 20px
+	z-index: 2
+	display: none
+	&__line, &__line::before, &__line::after
+		top: 0
+		left: 0
+		width: 15px
+		height: 2px
+		background: #fff
+		display: block
+		content: ''
+		position: absolute
+	&__line::before
+		top: 5px
+	&__line::after
+		top: 10px
+	&_active
+		top: 38px
+
+.left-menu
+	width: 380px
+	height: 100vh
+	position: fixed
+	z-index: 50
+	top: 0
+	left: -500px
+	background: #000
+	padding: 48px 40px
+	transition: .5s
+	&__logo
+		margin-bottom: 34px
+	&__menu
+		display: block !important
+		.menu__list
+			display: block
+			.menu__link
+				margin: 4px 0 0 0
+				a
+					color: #fff
+					transition: .25s
+					&:hover
+						color: $accent
+			.menu__link_btn
+				margin: 20px 0 0 0
+	&_visible
+		left: 0
+	&__close
+		position: absolute
+		top: 50px
+		right: 50px
+		cursor: pointer
+		color: #fff
+		font-size: 15px
+
+.welcome
+	position: relative
+	padding-bottom: 90px
+	&__title
+		margin-top: 100px
+	&__text
+		margin-bottom: 30px
+		font-family: 'Lato'
+	&__btn
+		margin-top: 35px
+	&__img
+		margin-top: 100px
+		width: 100%
+		height: auto
+		box-shadow: 15px 15px 0 $img-bg
+
+
+.advantage
+	padding-bottom: 120px
+	&__item
+		i
+			color: #ccc
+			font-size: 26px
+	&__title
+		font-size: 15px
+		font-weight: bold
+		text-transform: uppercase
+		margin-bottom: 25px
+		display: inline-block
+		padding-left: 20px
+	& .text
+		padding-left: 56px
+		font-family: 'Lato'
+
+.design
+	background: url(../img/bg-design.png) center no-repeat
+	background-size: cover
+	text-align: center
+	padding: 137px 0
+	position: relative
+	&_bg
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: #000
+		opacity: .7
+	&__title
+		color: #fff
+		span
+			color: $accent
+	&__text
+		color: #fff
+		line-height: 30px
+		font-family: 'Lato'
+	&__btn
+		margin: 45px auto 0
+
+.concept
+	padding: 90px 0 100px
+	&__text
+		margin-bottom: 30px
+		font-family: 'Lato'
+		color: $text
+	&__btn
+		margin-top: 35px
+	&__item
+		position: relative
+		i
+			color: #fff
+			font-size: 22px
+			margin-top: 45px
+			position: relative
+			z-index: 2
+			margin-left: 22px
+	&__block
+		position: absolute
+		top: 32px
+		left: 25px
+		width: 50px
+		height: 50px
+		background: $img-bg
+		transform: rotate(45deg) 
+	&__title
+		margin: 30px 0 15px
+		text-transform: uppercase
+		font-weight: bold
+	&__img
+		width: 100%
+	.text
+		font-family: 'Lato'
+
+.skills
+	padding: 120px 0 100px
+	background: $skills
+	text-align: center
+	&__container
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		align-items: center
+
+.tools
+	&__item
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		margin-bottom: 7px
+	&__img
+		width: 90%
+	&__title, &__percents
+		font-size: 14px
+		color: #000
+		font-weight: bold
+		font-family: 'Lato'
+		display: block
+	&__status
+		height: 7px
+		background: $accent
+		display: block
+		margin-bottom: 40px
+
+.portfolio
+	padding: 120px 0 35px
+	text-align: center
+	&__img
+		display: block
+		height: 280px
+		background: #F3F3F3
+		width: 100%
+	&__name
+		text-transform: uppercase
+		color: #000
+		font-weight: bold
+		font-size: 14px
+		margin-top: 28px
+	&__category
+		margin: 23px auto 65px
+		font-style: italic
+		font-size: 14px
+		color: $portfolio-text
+		font-family: 'Lato'
+
+.work
+	background: $gray-light
+	text-align: center
+	&__title
+		margin: 65px auto 19px
+		color: #fff
+		font-size: 18px
+	&__text
+		color: #ccc
+		margin-bottom: 65px
+		font-size: 14px
+		font-family: 'Lato'
+	&__btn
+		width: 177px
+	&__container
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		text-align: left
+		justify-content: center
+		align-items: center
+		i
+			color: #fff
+			font-size: 26px
+			text-align: center
+			display: block
+			border: 2px solid #fff
+			border-radius: 50%
+			width: 80px
+			height: 80px
+			line-height: 80px
+
+.backstage
+	padding: 120px 0 0
+	text-align: center
+	background: $skills
+
+.facts
+	position: relative
+	background: $test-facts
+	text-align: center
+	padding: 105px 0
+	background: url(../img/bg-facts.jpg) center top no-repeat
+	background-size: cover
+	&_bg
+		position: absolute
+		top: 0
+		left: 0
+		background: #2B2B2A
+		width: 100%
+		height: 100%
+		opacity: .9
+	i
+		color: $text
+		font-size: 50px
+	&__count
+		color: #fff
+		font-weight: bold
+		margin: 25px 0 10px
+		font-size: 40px
+		font-family: 'Lato'
+	&__text
+		color: $facts-text
+		text-transform: uppercase
+		font-weight: bold
+		font-family: 'Lato'
+
+.process
+	position: relative
+	border-bottom: 1px solid $process-border
+	&__title
+		margin-top: 100px
+	&__img
+		margin: 100px 0 80px
+		width: 100%
+		height: auto
+		box-shadow: 15px 15px 0 $img-bg
+	&__name
+		margin: 45px 0 20px
+		text-transform: uppercase
+		font-weight: bold
+		font-size: 14px
+		font-family: 'Lato'
+		letter-spacing: 3px
+	&__text
+		font-family: 'Lato'
+		line-height: 23px
+		font-size: 14px
+		color: $portfolio-text
+	&__panel
+		margin: 35px 0 75px -13px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+	&__item
+		&_hide
+			display: none
+	&__link
+		color: $form-text-color
+		width: 50px
+		height: 50px
+		border: 2px solid $process-border
+		border-radius: 50%
+		line-height: 50px
+		text-align: center
+		margin: 0 13px
+		cursor: pointer
+		transition: .25s
+		&_active
+			border-color: $accent
+			color: $accent
+	&__line
+		width: 10%
+		height: 2px
+		background: $process-border
+		margin-top: 24px
+
+.accordeon
+	width: 100%
+	&__title
+		width: 100%
+		display: block
+		border: 1px solid $form-border
+		height: 50px
+		text-transform: uppercase
+		line-height: 50px
+		padding-left: 20px
+		font-weight: bold
+		font-size: 14px
+		margin-bottom: 7px
+		cursor: pointer
+		position: relative
+		i
+			position: absolute
+			right: 20px
+			top: 18px
+		&_active
+			margin-bottom: 0
+			border-bottom: none
+			color: $accent
+	&__text
+		width: 100%
+		font-family: 'Lato'
+		color: $portfolio-text
+		font-size: 14px
+		line-height: 23px
+		padding: 0 40px 16px 20px
+		display: none
+		border: 1px solid $form-border
+		border-top: none
+		margin-bottom: 7px
+
+.mission
+	&__title
+		margin-top: 100px
+	&__img
+		margin-top: 40px
+		width: 100%
+
+.item
+	&__title
+		font-size: 40px
+		font-weight: bold
+		padding-top: 55px
+		font-family: 'Lato'
+		letter-spacing: 2px
+		span
+			font-size: 18px
+			vertical-align: super
+	&__name
+		font-size: 13px
+		text-transform: uppercase
+		line-height: 25px
+		letter-spacing: 2px
+		font-weight: bold
+		padding-bottom: 55px
+	&__head
+		display: block
+		transition: .25s
+	&__line
+		background: $process-border
+		height: 1px
+		width: 100%
+		margin-bottom: 40px
+	&__link
+		margin-bottom: 10px
+		font-family: 'Lato'
+		a
+			color: $portfolio-text
+			font-size: 14px
+	&__btn
+		margin: 44px auto 0
+		background: #000
+		border: 1px solid #000
+		width: 136px
+		height: 39px
+
+.packets
+	padding: 100px 0
+	text-align: center
+	background: $test-packets
+	background: url(../img/bg-packages.jpg) center no-repeat
+	background-size: cover
+	&__item
+		width: 100%
+		background: #fff
+		padding: 0 0px 60px
+		cursor: pointer
+		margin-top: 20px
+		transition: .25s
+		&:hover .item__head
+			background: $accent
+		&:hover .item__btn
+			background: $accent
+			border: 1px solid $accent
+		&:hover .item__title, &:hover .item__name
+			color: #fff
+
+.carousel
+	position: relative
+	&-indicators
+		position: relative
+		li
+			position: relative
+			height: 100px
+			width: 100px
+			margin: 0 30px 40px
+			cursor: pointer
+			transition: .4s
+			img
+				position: absolute
+				top: 0
+				left: 0
+				height: 100px
+				width: 100px
+				display: block
+				border: 1px solid #fff transparent
+				border-radius: 50%
+				transition: .35s
+		li.active
+			width: 115px
+			height: 115px
+			margin-bottom: 25px
+			img
+				width: 115px
+				height: 115px
+	&__text
+		font-size: 18px
+		font-family: 'Lato'
+		font-style: italic
+		line-height: 30px
+	&__author
+		font-size: 13px
+		text-transform: uppercase
+		font-weight: bold
+		margin: 55px 0 15px
+	&__position
+		font-size: 13px
+		text-transform: uppercase
+	&-control-prev
+		margin: 25px 100px 0
+		background: #fff
+		width: 30px
+		height: 30px
+		position: absolute
+		top: 0
+		left: 0
+	&-control-next
+		margin: 25px 100px 0
+		background: #fff
+		width: 30px
+		height: 30px
+		position: absolute
+		top: 0
+		right: 0
+	&-control-prev-icon, &-carousel-control-next-icon
+		background: none
+
+.fa-angle-right::before, .fa-angle-left::before
+	color: #999
+	font-size: 34px
+	position: absolute
+	top: 0
+	left: 0
+
+.reviews
+	padding: 120px 0 90px
+	text-align: center
+	position: relative
+
+.brands
+	padding: 100px 0
+	background: url(../img/bg-brands.jpg) center top no-repeat
+	background-size: cover
+	text-align: center
+	position: relative
+	&_bg
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: #000
+		opacity: .7
+	&__img
+		margin: 50px 0
+	&__line_vertical
+		width: 100%
+		height: 1px
+		background: #666
+	&__item
+		display: block
+		width: 100%
+		height: 100%
+		border-right: 1px solid #666
+
+.form
+	margin-top: 20px
+	&__item, &__item_message
+		outline: none
+		-moz-appearance: none
+		border: 1px solid $form-border
+	&__item
+		border: 1px solid $form-border
+		height: 50px
+		width: 100%
+		box-sizing: border-box
+		margin-bottom: 20px
+		&[placeholder]
+			padding-left: 15px
+			font-size: 14px
+			line-height: 23px
+			color: $form-text-color
+			font-family: 'Lato'
+		&_message
+			margin-bottom: 0
+			height: 220px
+			box-sizing: border-box
+			resize: none
+			padding-bottom: 170px
+	&__btn
+		margin: 30px auto 0
+
+.contact
+	padding: 120px 0
+	text-align: center
+	background: $skills
+
+.footer
+	padding: 80px 0
+	background: $gray-light
+	text-align: center
+	&__text
+		color: $facts-text
+		margin-top: 34px
+		font-size: 13px
+		line-height: 30px
+		text-transform: uppercase
+		font-weight: bold
+		font-family: 'Lato'
+		letter-spacing: 1px
+		i
+			margin: 0 5px
+	.social__list
+		justify-content: center
+		margin-top: 50px
+	.social__link
+		border: 1px solid $facts-text
+		border-radius: 50%
+		width: 40px
+		height: 40px
+		text-align: center
+		line-height: 40px
+	.social__link
+		a
+			font-size: 13px
+			display: block
+
+
+
+
+@import 'media'
